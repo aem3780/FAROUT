@@ -1,19 +1,19 @@
 var mysql = require('mysql2');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "June1301Pepper13!",
+  host: "cad.rit.edu",
+  user: "farout",
+  password: "gnmX5dWXwkJ6",
   database: "farout"
 });
 
 
 // con.connect(function(err) {
 //     if (err) throw err;
-//     var sql = "DROP TABLE memories";
+//     var sql = "CREATE DATABASE memories";
 //     con.query(sql, function (err, result) {
 //       if (err) throw err;
-//       console.log("Table created");
+//       console.log("Database created");
 //     });
 //   });
 
@@ -26,25 +26,21 @@ var con = mysql.createConnection({
 //     });
 //   });
 
-  // con.connect(function(err) {
-  //   if (err) throw err;
-  //   var sql = "INSERT INTO memories (memoryType, memory, submitted) VALUES ?";
-  //   var values = [
-  //     ['tasty', 'Going home to my parents\' cooking after penny pinching and lowkey starving at college. It reminded me there\'s more to food than budgeting and survival.', '2/26/2023 12:41:26'],
-  //     ['spooky', 'When I was like 8 years old I had a dream someone had slashed my neck. I woke up and genuinely thought I was going to bleed out and die. I lived though!', '2/26/2023 12:42:57'],
-  //     ['proud', 'When my dad completed his chemotherapy and beat cancer! ', '2/26/2023 12:45:29'],
-  //     ['proud', 'When I was accepted into New Media Design out of 150 applicants', '2/26/2023 12:51:33'],
-  //     ['beautiful', 'Having a bonfire on the beach with my family during a full moon.', '2/26/2023 13:01:35']
-  //   ];
-  //   con.query(sql, [values], function (err, result) {
-  //     if (err) throw err;
-  //     console.log("Number of records inserted: " + result.affectedRows);
-  //   });
-  // });
-  // con.query("SELECT * FROM memories", function (err, result, fields) {
-  //   if (err) throw err;
-  //   console.log(result);
-  // });
+  con.connect(function(err) {
+    if (err) throw err;
+    var sql = "INSERT INTO memories (memoryType, memory, submitted, imagePath) VALUES ?";
+    var values = [
+      ['tasty', 'Going home to my parents\' cooking after penny pinching and lowkey starving at college. It reminded me there\'s more to food than budgeting and survival.', '2/26/2023 12:41:26'],
+      ['spooky', 'When I was like 8 years old I had a dream someone had slashed my neck. I woke up and genuinely thought I was going to bleed out and die. I lived though!', '2/26/2023 12:42:57'],
+      ['proud', 'When my dad completed his chemotherapy and beat cancer! ', '2/26/2023 12:45:29'],
+      ['proud', 'When I was accepted into New Media Design out of 150 applicants', '2/26/2023 12:51:33'],
+      ['beautiful', 'Having a bonfire on the beach with my family during a full moon.', '2/26/2023 13:01:35']
+    ];
+    con.query(sql, [values], function (err, result) {
+      if (err) throw err;
+      console.log("Number of records inserted: " + result.affectedRows);
+    });
+  });
 
   con.connect(function(err) {
     if (err) throw err;
