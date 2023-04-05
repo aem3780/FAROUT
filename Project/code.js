@@ -7,7 +7,7 @@ let memory = document.createElement('div');
 var continueAnimating=true;
 
 var background = new Image();
-background.src = "bg-still.png";
+background.src = "./assets/bg-still.png";
 
 const alphas = [0.6, 0.7, 0.8, 0.9, 1];
 
@@ -131,14 +131,15 @@ class Canvas {
 function displayMemory(){
     memory.innerHTML = `
 <div id="memory>
-
 <div class="background">
-    <img src="bg-still.png">
+    <video autoplay loop muted class="background">
+        <source src="./assets/smaller-bg_compressed.mp4"/>
+    </video>
 </div>
 <div class="centered-container">
     <div class="cell">
         <video width="400" height="400" autoplay loop muted>
-            <source src="./assets/crazy.webm" alt="cell animation"/>
+            <source src="./assets/crazy_compressed.webm" alt="cell animation"/>
         </video>
     </div>
     <div class="content-block"> 
@@ -156,6 +157,7 @@ function displayMemory(){
 </div>
 `;
 document.body.appendChild(memory);
+
 }
 
 
