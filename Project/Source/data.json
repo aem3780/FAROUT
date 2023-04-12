@@ -1,0 +1,373 @@
+{
+   "Cells": [
+      {
+         "id": 1,
+         "memoryType": "tasty",
+         "image": "./assets/SpriteStrips/tastysprite.png",
+         "video": "./assets/video/tasty.webm",
+         "memory": "Going home to my parents' cooking after penny pinching and lowkey starving at college. It reminded me there's more to food than budgeting and survival.",
+         "dateSubmitted": "2/26/2023 12:41:26",
+         "photoLocation": null
+      },
+      {
+         "id": 2,
+         "memoryType": "spooky",
+         "image": "./assets/SpriteStrips/spookysprite.png",
+         "video": "./assets/video/spooky.webm",
+         "memory": "When I was like 8 years old I had a dream someone had slashed my neck. I woke up and genuinely thought I was going to bleed out and die. I lived though!",
+         "dateSubmitted": "2/26/2023 12:42:57",
+         "photoLocation": null
+      },
+      {
+         "id": 3,
+         "memoryType": "proud",
+         "image": "./assets/SpriteStrips/proudsprite.png",
+         "video": "./assets/video/proud.webm",
+         "memory": "When my dad completed his chemotherapy and beat cancer!",
+         "dateSubmitted": "2/26/2023 12:45:29",
+         "photoLocation": null
+      },
+      {
+         "id": 4,
+         "memoryType": "proud",
+         "image": "./assets/SpriteStrips/proudsprite.png",
+         "video": "./assets/video/proud.webm",
+         "memory": "When I was accepted into New Media Design out of 150 applicants",
+         "dateSubmitted": "2/26/2023 12:51:33",
+         "photoLocation": null
+      },
+      {
+         "id": 5,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "When I visited the Smoky Mountains in the fall",
+         "dateSubmitted": "2/26/2023 12:59:48",
+         "photoLocation": "./memoryPhotos/beautiful5.jpg"
+      },
+      {
+         "id": 6,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "Having a bonfire on the beach with my family during a full moon.",
+         "dateSubmitted": "2/26/2023 13:01:35",
+         "photoLocation": null
+      },
+      {
+         "id": 7,
+         "memoryType": "spooky",
+         "image": "./assets/SpriteStrips/spookysprite.png",
+         "video": "./assets/video/spooky.webm",
+         "memory": "When I went to Halloween Horror Nights at Universal Studios.",
+         "dateSubmitted": "2/26/2023 13:02:08",
+         "photoLocation": null
+      },
+      {
+         "id": 8,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "Seeing fireflies for the first time. Truly magical.",
+         "dateSubmitted": "2/26/2023 13:17:30",
+         "photoLocation": null
+      },
+      {
+         "id": 9,
+         "memoryType": "awkward",
+         "image": "./assets/SpriteStrips/awkwardsprite.png",
+         "video": "./assets/video/awkward.webm",
+         "memory": "When I absolutely flubbed an interview. They asked \"what's a fun fact about yourself?\" and I confessed my deep dark desire to pick up a goose by the neck and throw it. I did not get the job.",
+         "dateSubmitted": "2/26/2023 13:18:37",
+         "photoLocation": null
+      },
+      {
+         "id": 10,
+         "memoryType": "tasty",
+         "image": "./assets/SpriteStrips/tastysprite.png",
+         "video": "./assets/video/tasty.webm",
+         "memory": "Accidentally walking into a five-star restaurant in Iceland with my grandparents, and only realizing it when there were no prices on the menu and there were a multiple waiters serving our table.",
+         "dateSubmitted": "2/26/2023 13:27:03",
+         "photoLocation": "./memoryPhotos/tasty10.jpg"
+      },
+      {
+         "id": 11,
+         "memoryType": "crazy",
+         "image": "./assets/SpriteStrips/crazysprite.png",
+         "video": "./assets/video/crazy.webm",
+         "memory": "Canoeing out to an island in the dark and camping for the first time with friends.",
+         "dateSubmitted": "3/6/2023 12:01:42",
+         "photoLocation": "./memoryPhotos/crazy11.jpg"
+      },
+      {
+         "id": 12,
+         "memoryType": "tasty",
+         "image": "./assets/SpriteStrips/tastysprite.png",
+         "video": "./assets/video/tasty.webm",
+         "memory": "When I had the best Thai food I’ve ever had at Pai in Toronto.",
+         "dateSubmitted": "3/15/2023 16:51:50",
+         "photoLocation": "./memoryPhotos/tasty12.jpg"
+      },
+      {
+         "id": 13,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "Watching the sunset in Hawaii with my family.",
+         "dateSubmitted": "3/26/2023 11:07:54",
+         "photoLocation": "./memoryPhotos/beautiful13.jpg"
+      },
+      {
+         "id": 14,
+         "memoryType": "tasty",
+         "image": "./assets/SpriteStrips/tastysprite.png",
+         "video": "./assets/video/tasty.webm",
+         "memory": "When I visited Italy and I got to try Italian pizza for the first time! But it was gluten free!!",
+         "dateSubmitted": "3/26/2023 13:40:45",
+         "photoLocation": "./memoryPhotos/tasty14.jpg"
+      },
+      {
+         "id": 15,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "The sun setting over the horizon of the land. The power plant being outlined.",
+         "dateSubmitted": "3/26/2023 13:55:34",
+         "photoLocation": "./memoryPhotos/beautiful15.jpg"
+      },
+      {
+         "id": 16,
+         "memoryType": "proud",
+         "image": "./assets/SpriteStrips/proudsprite.png",
+         "video": "./assets/video/proud.webm",
+         "memory": "When my son passed the Series 7 exam straight out of high school.",
+         "dateSubmitted": "3/26/2023 13:56:24",
+         "photoLocation": null
+      },
+      {
+         "id": 17,
+         "memoryType": "silly",
+         "image": "./assets/SpriteStrips/sillysprite.png",
+         "video": "./assets/video/silly.webm",
+         "memory": "My husband and I strapped our mattress to the back of his truck when we moved, and when we unstrapped it, he was catapulted out of the truck onto the ground. Scary at first but hilarious.",
+         "dateSubmitted": "3/26/2023 14:04:41",
+         "photoLocation": null
+      },
+      {
+         "id": 18,
+         "memoryType": "awkward",
+         "image": "./assets/SpriteStrips/awkwardsprite.png",
+         "video": "./assets/video/awkward.webm",
+         "memory": "Falling down the stairs  in high school in a skirt while the whole school and my old boyfriend were watching!",
+         "dateSubmitted": "3/26/2023 14:07:56",
+         "photoLocation": null
+      },
+      {
+         "id": 19,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "Watching my husband walk our daughter down the isle at her wedding.",
+         "dateSubmitted": "3/26/2023 14:10:00",
+         "photoLocation": "./memoryPhotos/beautiful19.jpg"
+      },
+      {
+         "id": 20,
+         "memoryType": "joyful",
+         "image": "./assets/SpriteStrips/joyfulsprite.png",
+         "video": "./assets/video/joyful.webm",
+         "memory": "Being right in front of the stage at The Killers concert and hearing the first three notes of Mr. Brightside start.",
+         "dateSubmitted": "3/26/2023 14:23:39",
+         "photoLocation": "./memoryPhotos/joyful20.jpg"
+      },
+      {
+         "id": 21,
+         "memoryType": "crazy",
+         "image": "./assets/SpriteStrips/crazysprite.png",
+         "video": "./assets/video/crazy.webm",
+         "memory": "Canoeing out to an island in the dark and camping for the first time with friends.",
+         "dateSubmitted": "3/26/2023 14:26:00",
+         "photoLocation": "./memoryPhotos/crazy21.jpg"
+      },
+      {
+         "id": 22,
+         "memoryType": "joyful",
+         "image": "./assets/SpriteStrips/joyfulsprite.png",
+         "video": "./assets/video/joyful.webm",
+         "memory": "Right after giving birth to my kids and getting to hold them as a baby on my chest for the first time.",
+         "dateSubmitted": "3/26/2023 14:30:20",
+         "photoLocation": null
+      },
+      {
+         "id": 23,
+         "memoryType": "silly",
+         "image": "./assets/SpriteStrips/sillysprite.png",
+         "video": "./assets/video/silly.webm",
+         "memory": "One time I was white water rafting with friends in colorado. It was a hot day, it had been a long day at work. We rafted through some rapids, the splash of waves was rejuvinating and so I jumped out of the raft and floated alongside the group down the river, splashing and laughing with everyone.",
+         "dateSubmitted": "3/26/2023 17:04:55",
+         "photoLocation": "./memoryPhotos/silly23.jpg"
+      },
+      {
+         "id": 24,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "Diving and seeing whale sharks with my niece and nephew, manta rays in Indonesia, beautiful mountains in Utah. Our planet..is beautiful...",
+         "dateSubmitted": "3/26/2023 20:18:33",
+         "photoLocation": null
+      },
+      {
+         "id": 25,
+         "memoryType": "joyful",
+         "image": "./assets/SpriteStrips/joyfulsprite.png",
+         "video": "./assets/video/joyful.webm",
+         "memory": "When I gave birth to two beautiful twin girls.",
+         "dateSubmitted": "3/26/2023 21:42:57",
+         "photoLocation": "./memoryPhotos/joyful25.jpg"
+      },
+      {
+         "id": 26,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "My grandma was in her final days when we visited her at the nursing home, and she was struggling with picking up her spoon to eat her apple sauce. My mom carefully picked up the spoon and began to feed her. The circle of life was made particularly clear to me in that moment.",
+         "dateSubmitted": "3/26/2023 22:09:44",
+         "photoLocation": "./memoryPhotos/beautiful26.jpg"
+      },
+      {
+         "id": 27,
+         "memoryType": "proud",
+         "image": "./assets/SpriteStrips/proudsprite.png",
+         "video": "./assets/video/proud.webm",
+         "memory": "When I went zip lining with my family in Hawaii. I was terrified at first but ended up loving it!",
+         "dateSubmitted": "3/26/2023 22:11:09",
+         "photoLocation": "./memoryPhotos/proud27.jpg"
+      },
+      {
+         "id": 28,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "Just a few hours before my baptism, sunlight tore threw the clouds above the chapel amidst gentle sparkling rain.",
+         "dateSubmitted": "3/26/2023 22:34:19",
+         "photoLocation": "./memoryPhotos/beautiful28.jpg"
+      },
+      {
+         "id": 29,
+         "memoryType": "tasty",
+         "image": "./assets/SpriteStrips/tastysprite.png",
+         "video": "./assets/video/tasty.webm",
+         "memory": "Eating a Big Mac right after returning to the US after two weeks on the trail in Mexico.",
+         "dateSubmitted": "3/26/2023 23:05:26",
+         "photoLocation": null
+      },
+      {
+         "id": 30,
+         "memoryType": "silly",
+         "image": "./assets/SpriteStrips/sillysprite.png",
+         "video": "./assets/video/silly.webm",
+         "memory": "Years ago working as a lifeguard my friend would take a bite out of my sandwich every day. It really annoyed me, so I put a jellyfish in his bag to get even. He stopped taking bites out of my sandwich. Later on, he told me he hid a jellyfish in my sandwich and I ate it!",
+         "dateSubmitted": "3/26/2023 23:09:25",
+         "photoLocation": null
+      },
+      {
+         "id": 31,
+         "memoryType": "spooky",
+         "image": "./assets/SpriteStrips/spookysprite.png",
+         "video": "./assets/video/spooky.webm",
+         "memory": "When I was 8 years old I watched the original Tales from the Crypt movie. I couldn't sleep that night thinking about the scene with the beating heart on the desk. I slept with my mom that night.",
+         "dateSubmitted": "3/26/2023 23:13:25",
+         "photoLocation": null
+      },
+      {
+         "id": 32,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "Seeing this sunset on the island of Hawaii!",
+         "dateSubmitted": "3/27/2023 7:33:11",
+         "photoLocation": "./memoryPhotos/beautiful32.jpg"
+      },
+      {
+         "id": 33,
+         "memoryType": "tasty",
+         "image": "./assets/SpriteStrips/tastysprite.png",
+         "video": "./assets/video/tasty.webm",
+         "memory": "The first time I went to Nine Eleven Tavern for wings!",
+         "dateSubmitted": "3/27/2023 7:52:59",
+         "photoLocation": "./memoryPhotos/tasty33.jpg"
+      },
+      {
+         "id": 34,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "When I found a kitten in my yard, he bit me, gave me an infection and we named him Will.",
+         "dateSubmitted": "3/27/2023 9:05:08",
+         "photoLocation": "./memoryPhotos/beautiful34.jpg"
+      },
+      {
+         "id": 35,
+         "memoryType": "joyful",
+         "image": "./assets/SpriteStrips/joyfulsprite.png",
+         "video": "./assets/video/joyful.webm",
+         "memory": "Helping my grandma pick out a cat to adopt and bring home. Her name is Molly and she's the best!",
+         "dateSubmitted": "3/27/2023 9:07:23",
+         "photoLocation": "./memoryPhotos/joyful35.jpg"
+      },
+      {
+         "id": 36,
+         "memoryType": "tasty",
+         "image": "./assets/SpriteStrips/tastysprite.png",
+         "video": "./assets/video/tasty.webm",
+         "memory": "I once had a chicken nugget from Chick Fil A…",
+         "dateSubmitted": "3/27/2023 9:49:25",
+         "photoLocation": "./memoryPhotos/tasty36.jpg"
+      },
+      {
+         "id": 37,
+         "memoryType": "joyful",
+         "image": "./assets/SpriteStrips/joyfulsprite.png",
+         "video": "./assets/video/joyful.webm",
+         "memory": "An afternoon in Spain on the front porch with Nuria and abuela when you were about 3 months old. Anneliese was making you laugh.",
+         "dateSubmitted": "3/27/2023 21:10:09",
+         "photoLocation": "./memoryPhotos/joyful37.jpg"
+      },
+      {
+         "id": 38,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "When we took grandma skiing in the adaptive program. After almost ten years of wanting to go skiing again, we were able to get her on the slopes.",
+         "dateSubmitted": "3/27/2023 21:17:49",
+         "photoLocation": "./memoryPhotos/beautiful38.jpg"
+      },
+      {
+         "id": 39,
+         "memoryType": "silly",
+         "image": "./assets/SpriteStrips/sillysprite.png",
+         "video": "./assets/video/silly.webm",
+         "memory": "Playing dominoes in vermont, with the crazy arguments and triple chicken foot!",
+         "dateSubmitted": "3/28/2023 19:18:47",
+         "photoLocation": null
+      },
+      {
+         "id": 40,
+         "memoryType": "beautiful",
+         "image": "./assets/SpriteStrips/beautifulsprite.png",
+         "video": "./assets/video/beautiful.webm",
+         "memory": "My most beautiful memory was when I saw my wife standing in her wedding dress, on our wedding day. She looked radiant like a goddess...",
+         "dateSubmitted": "4/6/2023 20:18:48",
+         "photoLocation": "./memoryPhotos/beautiful40.jpg"
+      },
+      {
+         "id": 41,
+         "memoryType": "proud",
+         "image": "./assets/SpriteStrips/proudsprite.png",
+         "video": "./assets/video/proud.webm",
+         "memory": "My most proud memory was bringing my four legged daughter Petalo “Peta” home from the streets of Cuba and subsequently saved her puppies Tigre, who we raised, Antonio who my parents Mike and Georgene raised and Cubita, who my best friend Shanti raised. Another (lil’ Peta) passed soon after birth.",
+         "dateSubmitted": "4/8/2023 12:04:31",
+         "photoLocation": "./memoryPhotos/proud41.jpg"
+      }
+   ]
+}

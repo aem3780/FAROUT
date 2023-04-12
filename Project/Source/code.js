@@ -1,4 +1,12 @@
 
+let spritePaths = [];
+let memoryTypes = [];
+let memories = [];
+let videos = [];
+let submissions = [];
+let photoPaths = [];
+
+
 const windowHeight = window.innerHeight;
 const windowWidth = window.innerWidth;
 
@@ -14,7 +22,7 @@ const alphas = [0.6, 0.7, 0.8, 0.9, 1];
 const cellSize = [54, 50, 46, 42, 38];
 
 function alphaRandom() {
-    var rand = alphas[Math.floor(Math.random() * images.length)];
+    var rand = alphas[Math.floor(Math.random() * 7)];
     var alphaValue = rand;
     return alphaValue;
 }
@@ -25,12 +33,16 @@ function cellSizeRandom() {
     return cellSizeValue;
 }
 
-const images = ['./assets/SpriteStrips/awkwardsprite.png', './assets/SpriteStrips/beautifulsprite.png', './assets/SpriteStrips/crazysprite.png', './assets/SpriteStrips/joyfulsprite.png', './assets/SpriteStrips/proudsprite.png', './assets/SpriteStrips/sillysprite.png', './assets/SpriteStrips/spookysprite.png', './assets/SpriteStrips/tastysprite.png'];
-function imgRandom() {
-        var rand = images[Math.floor(Math.random() * images.length)];
+function assignImage(value) {
+        var assign = spritePaths[value];
         var cellImg = document.createElement('img');
-        cellImg.src = rand;
+        cellImg.src = assign;
         return cellImg;
+}
+
+function assignVideo(value) {
+    var assign = videos[value];
+    return assign;
 }
 
 class State {
@@ -139,7 +151,7 @@ function displayMemory(){
 <div class="centered-container">
     <div class="cell">
         <video width="400" height="400" autoplay loop muted>
-            <source id="celltype" src="./assets/beautiful.webm" alt="cell animation"/>
+            <source id="cellVideo" src="./assets/video/beautiful.webm" alt="cell animation"/>
         </video>
     </div>
     <div class="content-block"> 
@@ -153,7 +165,7 @@ function displayMemory(){
             <h2 id="memorytext"> When I visited the Smoky Mountains in the fall  </h2>
         </div>
         <div class="submission-data"><h4 id="submissiontext"> SUBMITTED ON 02/04/23 10:34am </h4></div>
-        <div class="image" style="background: url(assets/image.jpg); background-size: cover;"> </div> 
+        <div id="memoryPhoto" class="image" style="background: url(assets/image.jpg); background-size: cover;"> </div> 
     </div>
 </div>
 </div>
@@ -184,7 +196,7 @@ class Cell {
                 radius: 25,
                 cellSize: 50,
                 alpha: 1,
-                image: null,
+                // image: null,
                 animateSpeed: Math.floor(Math.random() * (16 - 8) + 8),
                 frame: 0,
                 collisions: []
@@ -203,7 +215,7 @@ class Cell {
                 //continueAnimating = !continueAnimating;
                 displayMemory();
             }
-            continueAnimating = true;
+            //continueAnimating = true;
 
             
         });
@@ -214,9 +226,9 @@ class Cell {
     }
 
     update(state, time, updateId) {
-        if (!continueAnimating) {
-            return this;
-          }
+        // if (!continueAnimating) {
+        //     return this;
+        //   }
 
         if(gameFrame % this.animateSpeed === 0){
             this.frame >= 8 ? this.frame = 0 : this.frame++;
@@ -327,22 +339,35 @@ const randomCell = () => {
 
 const collidingCells = ({ width = windowWidth, height = windowHeight, parent = document.body, count = 20 } = {}) => {
 
-
-
     const display = new Canvas(parent, width, height);
     const cells = [];
-    for (let i = 0; i < count; i++) {
+
+    fetch('Source/data.json')
+    .then(response => response.json())
+    .then(data => {
+      for(let i = 0; i < 20; i++){
+
+        spritePaths.push(data.Cells[i].image);
+        memoryTypes.push(data.Cells[i].memoryType);
+        memories.push(data.Cells[i].memory);
+        videos.push(data.Cells[i].video);
+        submissions.push(data.Cells[i].dateSubmitted);
+        photoPaths.push(data.Cells[i].photoLocation);
+
         cells.push(new Cell({
             cellSize: cellSizeRandom(),
             radius: cellSizeRandom()/2,
             alpha: alphaRandom(),
-            image: imgRandom(),
+            image: assignImage(i),
+            //video: assignVideo(i),
             position: new Vector(random(width-10, 10), random(height - 10, 10)),
             velocity: new Vector(random(.3, -.3), random(.3, -.3)),
         }));
+      }
+      console.log(photoPaths);
+    })
+    .catch(error => console.error(error));
 
-
-    }
 
     let state = new State(display, cells);
     if(!continueAnimating){return;}
@@ -355,5 +380,5 @@ const collidingCells = ({ width = windowWidth, height = windowHeight, parent = d
 };
 
 
-collidingCells();
 
+collidingCells();
