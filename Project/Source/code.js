@@ -100,7 +100,6 @@ class Canvas {
         this.canvas = document.createElement('canvas');
         this.canvas.width = width;
         this.canvas.height = height;
-        //this.canvas.style.color = "black";
         parent.appendChild(this.canvas);
         this.ctx = this.canvas.getContext('2d');
     }
