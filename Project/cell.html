@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>FAR OUT - VIEW MEMORY</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+    <body>
+        <nav>
+            <img src="./assets/logo.png" height="20">
+            <a href="info.html"><img src="./assets/help.png" class="help-icon"></a>
+        </nav>
+        <div class="background">
+            <video autoplay loop muted class="background">
+                <source src="./assets/background-new.webm"/>
+            </video>
+        </div>
+        <div class="centered-container">
+            <div class="cell">
+                <video id="cellVideo" width="400" height="400" src="./assets/video/beautiful.webm" autoplay loop muted>
+                </video>
+            </div>
+            <div class="content-block"> 
+                <a href="index.html">
+                <img class="ui-back" src="./assets/back.png"></a>
+                <div class="title-text">
+                    <h3> A <span id="memoryType"></span> memory </h3>
+                </div>
+                <div class="submission-text">
+                    <h2 id="memoryText"> When I visited the Smoky Mountains in the fall </h2>
+                </div>
+                <div class="submission-data"><h4 id="submission"> SUBMITTED ON 02/04/23 @ 10:34am </h4></div>
+                <img  class="image" id="memoryImage" src="./assets/image.jpg">
+                
+            </div>
+        </div>
+    </body>
+    <script>
+        document.getElementById("memoryText").innerHTML = localStorage.getItem('cellMemory');
+        document.getElementById("memoryType").innerHTML = localStorage.getItem('cellMemoryType');
+        document.getElementById("cellVideo").setAttribute("src", localStorage.getItem('cellVideo'));
+        document.getElementById("submission").innerHTML = localStorage.getItem('submittedData');
+
+        if(localStorage.getItem('cellImage') == 'null'){
+            document.getElementById('memoryImage').hidden = true
+        }
+        else{
+            document.getElementById("memoryImage").setAttribute("src", localStorage.getItem('cellImage'));
+        }
+
+        if(localStorage.getItem('cellMemoryType') == "joyful"){
+            document.getElementById('memoryType').style.color = "#09D379";
+        }
+
+        if(localStorage.getItem('cellMemoryType') == "proud"){
+            document.getElementById('memoryType').style.color = "#065CE4";
+        }
+
+        if(localStorage.getItem('cellMemoryType') == "awkward"){
+            document.getElementById('memoryType').style.color = "#05B0DB";
+        }
+        
+        if(localStorage.getItem('cellMemoryType') == "beautiful"){
+            document.getElementById('memoryType').style.color = "#AE01FF";
+        }
+
+        if(localStorage.getItem('cellMemoryType') == "crazy"){
+            document.getElementById('memoryType').style.color = "#FF3270";
+        }
+
+        if(localStorage.getItem('cellMemoryType') == "silly"){
+            document.getElementById('memoryType').style.color = "#48B1AD";
+        }
+
+        if(localStorage.getItem('cellMemoryType') == "spooky"){
+            document.getElementById('memoryType').style.color = "#DF312F";
+        }
+
+        if(localStorage.getItem('cellMemoryType') == "tasty"){
+            document.getElementById('memoryType').style.color = "#FFC52E";
+        }
+
+
+    </script>
+</html>

@@ -1,17 +1,12 @@
 
 let spritePaths = [];
-let memoryTypes = [];
-let memories = [];
-let videos = [];
-let submissions = [];
-let photoPaths = [];
-
 
 const windowHeight = window.innerHeight;
 const windowWidth = window.innerWidth;
 
 let gameFrame = 0;
-let memory = document.createElement('div');
+
+
 var continueAnimating=true;
 
 var background = new Image();
@@ -140,48 +135,10 @@ class Canvas {
     }
 }
 
-function displayMemory(){
-    memory.innerHTML = `
-<div id="memory>
-<div class="background">
-    <video autoplay loop muted class="background">
-        <source src="./assets/smaller-bg_compressed.mp4"/>
-    </video>
-</div>
-<div class="centered-container">
-    <div class="cell">
-        <video width="400" height="400" autoplay loop muted>
-            <source id="cellVideo" src="./assets/video/beautiful.webm" alt="cell animation"/>
-        </video>
-    </div>
-    <div class="content-block"> 
-        <div>
-        <img class="ui-back" src="./assets/back.png" class="closebtn" onclick="closeMemory()">
-        </div>
-        <div class="title-text">
-            <h3> A <span id="memorytype">beautiful</span> memory </h3>
-        </div>
-        <div class="submission-text">
-            <h2 id="memorytext"> When I visited the Smoky Mountains in the fall  </h2>
-        </div>
-        <div class="submission-data"><h4 id="submissiontext"> SUBMITTED ON 02/04/23 10:34am </h4></div>
-        <div id="memoryPhoto" class="image" style="background: url(assets/image.jpg); background-size: cover;"> </div> 
-    </div>
-</div>
-</div>
-`;
-document.body.appendChild(memory);
 
-}
 
 
   
-  /* Close */
-  function closeMemory() {
-    //continueAnimating = true;
-    document.body.removeChild(memory);
-    window.location.reload();
-  }
 
   
 
@@ -196,7 +153,9 @@ class Cell {
                 radius: 25,
                 cellSize: 50,
                 alpha: 1,
-                // image: null,
+                cellID: 0,
+                memory: "",
+                memoryType: "tasty",
                 animateSpeed: Math.floor(Math.random() * (16 - 8) + 8),
                 frame: 0,
                 collisions: []
@@ -212,12 +171,13 @@ class Cell {
             const y = event.clientY - rect.top;
             const distance = Math.sqrt((x - this.position.x) ** 2 + (y - this.position.y) ** 2);
             if (distance <= this.radius) {
-                //continueAnimating = !continueAnimating;
-                displayMemory();
+                localStorage.setItem('cellMemory', this.memory);
+                localStorage.setItem('cellMemoryType', this.memoryType)
+                localStorage.setItem('cellImage', this.photoPath)
+                localStorage.setItem('cellVideo', this.video)
+                localStorage.setItem('submittedData', this.submitted)
+                window.location.href = 'cell.html';
             }
-            //continueAnimating = true;
-
-            
         });
     }
 
@@ -226,9 +186,6 @@ class Cell {
     }
 
     update(state, time, updateId) {
-        // if (!continueAnimating) {
-        //     return this;
-        //   }
 
         if(gameFrame % this.animateSpeed === 0){
             this.frame >= 8 ? this.frame = 0 : this.frame++;
@@ -345,26 +302,26 @@ const collidingCells = ({ width = windowWidth, height = windowHeight, parent = d
     fetch('Source/data.json')
     .then(response => response.json())
     .then(data => {
-      for(let i = 0; i < 20; i++){
+      for(let i = 0; i < 40; i++){
 
         spritePaths.push(data.Cells[i].image);
-        memoryTypes.push(data.Cells[i].memoryType);
-        memories.push(data.Cells[i].memory);
-        videos.push(data.Cells[i].video);
-        submissions.push(data.Cells[i].dateSubmitted);
-        photoPaths.push(data.Cells[i].photoLocation);
 
         cells.push(new Cell({
             cellSize: cellSizeRandom(),
             radius: cellSizeRandom()/2,
             alpha: alphaRandom(),
             image: assignImage(i),
-            //video: assignVideo(i),
+            cellID: data.Cells[i].id,
+            memory: data.Cells[i].memory,
+            memoryType: data.Cells[i].memoryType,
+            photoPath: data.Cells[i].photoLocation,
+            video: data.Cells[i].video,
+            submitted: data.Cells[i].dateSubmitted,
             position: new Vector(random(width-10, 10), random(height - 10, 10)),
             velocity: new Vector(random(.3, -.3), random(.3, -.3)),
         }));
       }
-      console.log(photoPaths);
+      //console.log(photoPaths);
     })
     .catch(error => console.error(error));
 
