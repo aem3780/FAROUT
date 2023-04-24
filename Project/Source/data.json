@@ -368,6 +368,60 @@
          "memory": "My most proud memory was bringing my four legged daughter Petalo “Peta” home from the streets of Cuba and subsequently saved her puppies Tigre, who we raised, Antonio who my parents Mike and Georgene raised and Cubita, who my best friend Shanti raised. Another (lil’ Peta) passed soon after birth.",
          "dateSubmitted": "SUBMITTED ON 4/8/2023 @ 12:04:31",
          "photoLocation": "./memoryPhotos/proud41.jpg"
+      },
+      {
+         "id": 42,
+         "memoryType": "joyful",
+         "image": "./assets/SpriteStrips/joyfulsprite.png",
+         "video": "./assets/video/joyful.webm",
+         "memory": "Watching my mom dance with each of her grandkids at a wedding to her favorite song Dancing Queen",
+         "dateSubmitted": "SUBMITTED ON 4/20/2023 @ 9:25:52",
+         "photoLocation": "./memoryPhotos/joyful42.jpg"
+      },
+      {
+         "id": 43,
+         "memoryType": "silly",
+         "image": "./assets/SpriteStrips/sillysprite.png",
+         "video": "./assets/video/silly.webm",
+         "memory": "A silly memory is watching my kids attemto to make it down the mountain after swapping skis and snowboards this past winter",
+         "dateSubmitted": "SUBMITTED ON 4/20/2023 @ 14:13:11",
+         "photoLocation": "./memoryPhotos/silly43.jpg"
+      },
+      {
+         "id": 44,
+         "memoryType": "proud",
+         "image": "./assets/SpriteStrips/proudsprite.png",
+         "video": "./assets/video/proud.webm",
+         "memory": "A proud memory is skiing in Andorra when I finally landed a trick in the terrain park after trying for a long time",
+         "dateSubmitted": "SUBMITTED ON 4/20/2023 @ 14:13:11",
+         "photoLocation": "./memoryPhotos/proud44.jpg"
+      },
+      {
+         "id": 45,
+         "memoryType": "joyful",
+         "image": "./assets/SpriteStrips/joyfulsprite.png",
+         "video": "./assets/video/joyful.webm",
+         "memory": "My most joyful recent memory was being on my boat at sunset and noticing pods of dolphins in the distance. Before we knew it, we were completely surrounded by playful pods of dolphins. It was incredible. ",
+         "dateSubmitted": "SUBMITTED ON 4/21/2023 @ 12:10:43",
+         "photoLocation": "./memoryPhotos/joyful45.jpg"
+      },
+      {
+         "id": 46,
+         "memoryType": "joyful",
+         "image": "./assets/SpriteStrips/joyfulsprite.png",
+         "video": "./assets/video/joyful.webm",
+         "memory": "Growing up listening to my grandma tell me all of her stories.",
+         "dateSubmitted": "SUBMITTED ON 4/24/2023 @ 19:17:59",
+         "photoLocation": null
+      },
+      {
+         "id": 47,
+         "memoryType": "silly",
+         "image": "./assets/SpriteStrips/sillysprite.png",
+         "video": "./assets/video/silly.webm",
+         "memory": "Watching my dog play with his favorite toy, a bowling ball.",
+         "dateSubmitted": "SUBMITTED ON 4/24/2023 @ 19:25:59",
+         "photoLocation": "./memoryPhotos/silly47.jpg"
       }
    ]
 }

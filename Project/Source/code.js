@@ -301,7 +301,7 @@ const collidingCells = ({ width = windowWidth, height = windowHeight, parent = d
     fetch('Source/data.json')
     .then(response => response.json())
     .then(data => {
-      for(let i = 0; i < 40; i++){
+      for(let i = 0; i < 47; i++){
 
         spritePaths.push(data.Cells[i].image);
 
