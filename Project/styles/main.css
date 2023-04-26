@@ -41,9 +41,11 @@ nav {
 .cell-cluster {
     width: 700px;
     height: 400px;
+    animation: fadeIn 3s;
 }
 
 .centered-container {
+    animation: fadeIn 3s;
     width: 1000px;
     display: -webkit-flex;
     display: flex;
@@ -196,6 +198,10 @@ h4 {
     line-height: 10px;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
 @-webkit-keyframes action {
     0% { transform: translateY(0); }
