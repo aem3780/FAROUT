@@ -1,20 +1,15 @@
 
 let spritePaths = [];
+let gameFrame = 0;
 
 const windowHeight = window.innerHeight;
 const windowWidth = window.innerWidth;
+const alphas = [0.6, 0.7, 0.8, 0.9, 1];
+const cellSize = [54, 50, 46, 42, 38];
 
-let gameFrame = 0;
-
-
-var continueAnimating=true;
-
+var continueAnimating = true;
 var background = new Image();
 background.src = "./assets/bg-still.png";
-
-const alphas = [0.6, 0.7, 0.8, 0.9, 1];
-
-const cellSize = [54, 50, 46, 42, 38];
 
 function alphaRandom() {
     var rand = alphas[Math.floor(Math.random() * 7)];
@@ -29,10 +24,10 @@ function cellSizeRandom() {
 }
 
 function assignImage(value) {
-        var assign = spritePaths[value];
-        var cellImg = document.createElement('img');
-        cellImg.src = assign;
-        return cellImg;
+    var assign = spritePaths[value];
+    var cellImg = document.createElement('img');
+    cellImg.src = assign;
+    return cellImg;
 }
 
 function assignVideo(value) {
@@ -59,8 +54,6 @@ class State {
         return new State(this.display, actors);
     }
 }
-
-
 
 class Vector {
     constructor(x, y) {
@@ -93,8 +86,6 @@ class Vector {
     }
 }
 
-
-
 class Canvas {
     constructor(parent = document.body, width = windowWidth, height = windowHeight) {
         this.canvas = document.createElement('canvas');
@@ -112,7 +103,7 @@ class Canvas {
 
     clearDisplay() {
 
-        this.ctx.drawImage(background,0,0, windowWidth, windowHeight);
+        this.ctx.drawImage(background, 0, 0, windowWidth, windowHeight);
     }
 
     drawActors(actors) {
@@ -122,24 +113,16 @@ class Canvas {
             }
         }
     }
-    
 
     drawCircle(actor) {
         this.ctx.save();
         this.ctx.globalAlpha = actor.alpha;
         this.ctx.arc(actor.position.x, actor.position.y, actor.radius, 0, Math.PI * 2);
-        this.ctx.drawImage(actor.image, actor.frame * 100, 0, 100, 100, actor.position.x-actor.radius, actor.position.y-actor.radius, actor.cellSize, actor.cellSize);
+        this.ctx.drawImage(actor.image, actor.frame * 100, 0, 100, 100, actor.position.x - actor.radius, actor.position.y - actor.radius, actor.cellSize, actor.cellSize);
         this.ctx.restore();
-        
+
     }
 }
-
-
-
-
-  
-
-  
 
 class Cell {
     constructor(config) {
@@ -186,12 +169,12 @@ class Cell {
 
     update(state, time, updateId) {
 
-        if(gameFrame % this.animateSpeed === 0){
+        if (gameFrame % this.animateSpeed === 0) {
             this.frame >= 8 ? this.frame = 0 : this.frame++;
-            
-        } 
 
-        const upperLimit = new Vector(state.display.canvas.width +40, state.display.canvas.height + 40);
+        }
+
+        const upperLimit = new Vector(state.display.canvas.width + 40, state.display.canvas.height + 40);
         const lowerLimit = new Vector(-40, -40);
         let newX = this.position.x + this.velocity.x;
         let newY = this.position.y + this.velocity.y;
@@ -248,16 +231,13 @@ class Cell {
     }
 }
 
-
-
 // see elastic collision: https://en.wikipedia.org/wiki/Elastic_collision
 const collisionVector = (particle1, particle2) => {
     // add mass to the system
     const massRatio = ((2 * particle2.sphereArea) / (particle1.sphereArea + particle2.sphereArea));
-    const multiplyValue = (particle1.velocity.subtract(particle2.velocity).dotProduct(particle1.position.subtract(particle2.position))/ particle1.position.subtract(particle2.position).magnitude ** 2);
+    const multiplyValue = (particle1.velocity.subtract(particle2.velocity).dotProduct(particle1.position.subtract(particle2.position)) / particle1.position.subtract(particle2.position).magnitude ** 2);
     return particle1.velocity.subtract(particle1.position.subtract(particle2.position).multiply(multiplyValue).multiply(massRatio));
 };
-
 
 const runAnimation = animation => {
     let lastTime = null;
@@ -272,7 +252,7 @@ const runAnimation = animation => {
         }
         lastTime = time;
 
-        if(continueAnimating) {
+        if (continueAnimating) {
             requestAnimationFrame(frame);
         }
 
@@ -280,12 +260,9 @@ const runAnimation = animation => {
     requestAnimationFrame(frame);
 };
 
-
-
-
 const random = (max, min) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
-    
+
 };
 
 const randomCell = () => {
@@ -299,42 +276,37 @@ const collidingCells = ({ width = windowWidth, height = windowHeight, parent = d
     const cells = [];
 
     fetch('Source/data.json')
-    .then(response => response.json())
-    .then(data => {
-      for(let i = 0; i < 47; i++){
+        .then(response => response.json())
+        .then(data => {
+            for (let i = 0; i < 47; i++) {
 
-        spritePaths.push(data.Cells[i].image);
+                spritePaths.push(data.Cells[i].image);
 
-        cells.push(new Cell({
-            cellSize: cellSizeRandom(),
-            radius: cellSizeRandom()/2,
-            alpha: alphaRandom(),
-            image: assignImage(i),
-            cellID: data.Cells[i].id,
-            memory: data.Cells[i].memory,
-            memoryType: data.Cells[i].memoryType,
-            photoPath: data.Cells[i].photoLocation,
-            video: data.Cells[i].video,
-            submitted: data.Cells[i].dateSubmitted,
-            position: new Vector(random(width-10, 10), random(height - 10, 10)),
-            velocity: new Vector(random(.3, -.3), random(.3, -.3)),
-        }));
-      }
-      //console.log(photoPaths);
-    })
-    .catch(error => console.error(error));
-
+                cells.push(new Cell({
+                    cellSize: cellSizeRandom(),
+                    radius: cellSizeRandom() / 2,
+                    alpha: alphaRandom(),
+                    image: assignImage(i),
+                    cellID: data.Cells[i].id,
+                    memory: data.Cells[i].memory,
+                    memoryType: data.Cells[i].memoryType,
+                    photoPath: data.Cells[i].photoLocation,
+                    video: data.Cells[i].video,
+                    submitted: data.Cells[i].dateSubmitted,
+                    position: new Vector(random(width - 10, 10), random(height - 10, 10)),
+                    velocity: new Vector(random(.3, -.3), random(.3, -.3)),
+                }));
+            }
+        })
+        .catch(error => console.error(error));
 
     let state = new State(display, cells);
-    if(!continueAnimating){return;}
+    if (!continueAnimating) { return; }
     runAnimation(time => {
         state = state.update(time);
         display.sync(state);
     });
 
-
 };
-
-
 
 collidingCells();
