@@ -422,6 +422,78 @@
          "memory": "Watching my dog play with his favorite toy, a bowling ball.",
          "dateSubmitted": "SUBMITTED ON 4/24/2023 @ 19:25:59",
          "photoLocation": "./memoryPhotos/silly47.jpg"
+      },
+      {
+         "id": 48,
+         "memoryType": "crazy",
+         "image": "./assets/SpriteStrips/crazysprite.png",
+         "video": "./assets/video/crazy.webm",
+         "memory": "When me and my friends went to the store and we saw a man without a shirt and he was dancing.",
+         "dateSubmitted": "SUBMITTED ON 4/29/2023 @ 11:55:38",
+         "photoLocation": null
+      },
+      {
+         "id": 49,
+         "memoryType": "silly",
+         "image": "./assets/SpriteStrips/sillysprite.png",
+         "video": "./assets/video/silly.webm",
+         "memory": "When I found a year old can of spaghettios in my back pack.",
+         "dateSubmitted": "SUBMITTED ON 4/29/2023 @ 11:58:18",
+         "photoLocation": null
+      },
+      {
+         "id": 50,
+         "memoryType": "awkward",
+         "image": "./assets/SpriteStrips/awkwardsprite.png",
+         "video": "./assets/video/awkward.webm",
+         "memory": "Using a bathroom with clear glass windows and not pressing the button to make the glass fog.",
+         "dateSubmitted": "SUBMITTED ON 4/29/2023 @ 11:35:56",
+         "photoLocation": null
+      },
+      {
+         "id": 51,
+         "memoryType": "spooky",
+         "image": "./assets/SpriteStrips/spookysprite.png",
+         "video": "./assets/video/spooky.webm",
+         "memory": "When I was 5 my family liked the nightmare before Christmas so one movie night we were looking for something on the kids Netflix profile and we found coralline and my parents were like ooh by Tim burton! Um. I didn’t get to finish the movie. I also had nightmares for 2 years.",
+         "dateSubmitted": "SUBMITTED ON 4/29/2023 @ 11:27:29",
+         "photoLocation": null
+      }, 
+      {
+         "id": 52,
+         "memoryType": "silly",
+         "image": "./assets/SpriteStrips/sillysprite.png",
+         "video": "./assets/video/silly.webm",
+         "memory": "Spraying myself with Pam cooking spray to get a tan.",
+         "dateSubmitted": "SUBMITTED ON 4/29/2023 @ 11:58:18",
+         "photoLocation": null
+      }, 
+      {
+         "id": 53,
+         "memoryType": "crazy",
+         "image": "./assets/SpriteStrips/crazysprite.png",
+         "video": "./assets/video/crazy.webm",
+         "memory": "I once slid several hundred feet down an icy ski slope on a plastic bag. I was intoxicated at the time..",
+         "dateSubmitted": "SUBMITTED ON 4/29/2023 @ 10:43:24",
+         "photoLocation": null
+      },
+      {
+         "id": 54,
+         "memoryType": "awkward",
+         "image": "./assets/SpriteStrips/awkwardsprite.png",
+         "video": "./assets/video/awkward.webm",
+         "memory": "I spit on a guy at camp and he avoided me for 3 years.",
+         "dateSubmitted": "SUBMITTED ON 4/29/2023 @ 10:36:05",
+         "photoLocation": null
+      },
+      {
+         "id": 55,
+         "memoryType": "spooky",
+         "image": "./assets/SpriteStrips/spookysprite.png",
+         "video": "./assets/video/spooky.webm",
+         "memory": "Seeing a baby bird on the ground, under a tree.  I approached it and it seemed to be moving.  I wanted to put it back in the nest but then maggots popped its head off!  I ran home very scared….",
+         "dateSubmitted": "SUBMITTED ON 4/29/2023 @ 10:25:20",
+         "photoLocation": null
       }
    ]
 }

@@ -20,6 +20,7 @@ html {
 }
 
 body {
+    overflow: hidden;
     background: rgb(23,11,56);
     background: radial-gradient(circle, rgba(23,11,56,1) 0%, rgba(6,1,20,1) 100%);
 }
